@@ -1,0 +1,111 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 21cm;
+  height: 27.71cm;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  border: solid 1cm #d6a59e;
+  overflow: hidden;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+img {
+  height: 3cm;
+}
+.conteudo {
+  text-align: center;
+  margin: 0 1cm 1cm 1cm;
+}
+p {
+  text-align: left;
+  font-size: 20px;
+}
+.destaque {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.linha {
+  line-height: 5px;
+}
+.localEntrega {
+  margin-top: -10px;
+}
+.descricao {
+  margin-top: -20px;
+}
+.formaPagar{
+  margin-top: 10px;
+}
+.contrato {
+  display: none;
+}
+.formulario {
+  margin: auto;
+  margin-top: 5rem;
+  line-height: 40px;
+  width: 1024px;
+  border: solid 1cm #d6a59e;
+  border-bottom: none;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 20px;
+}
+.form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 1rem;
+  width: 600px;
+  justify-content: center;
+  margin: 0 auto;
+}
+input {
+  background-color: thistle;
+  border: solid black;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+select {
+  background-color: thistle;
+  border: solid black;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+body{
+  margin:auto;
+  text-align: center;
+}
+.enviar{
+  border: none;
+  padding: 0 4rem;
+  height: 5rem;
+  background-color: thistle;
+  margin-bottom: 10rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  transition: .5s;
+}
+.enviar:hover{
+  background-color: rgb(173, 106, 173);
+}
