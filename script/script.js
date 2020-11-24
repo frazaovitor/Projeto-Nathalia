@@ -1,4 +1,8 @@
+// CAPTURA OS CAMPOS DO FORMULÁRIO
+
 cadastro = document.querySelectorAll('.cadastrar')
+
+// CAPTURA OS CAMPOS DO CONTRATO 
 
 dadosGerais = document.querySelector('.dadosGerais')
 diaCasamento = document.querySelector('.dataCasamento')
@@ -15,9 +19,11 @@ botao = document.querySelector('.enviar')
 botao.addEventListener('click', () => {
 
     // VERIFICA SE EXISTE ALGUM CAMPO NÃO PREENCHIDO
-    if (true) {
 
-        // ATUALIZA O CONTRATO COM OS VALORES DIGITADOS
+    if (cadastro[0].value != '' && cadastro[1].value != '' && cadastro[2].value != '' && cadastro[3].value != '' && cadastro[4].value != '' && cadastro[5].value != '' && cadastro[6].value != '' && cadastro[7].value != '' && cadastro[8].value != '' && cadastro[9].value != '' && cadastro[10].value != '' && cadastro[11].value != '' && cadastro[12].value != '' && cadastro[13].value != '' && cadastro[14].value != '' && cadastro[15].value != '' && cadastro[16] != '' && cadastro[17] != '') {
+
+        // ATUALIZA O CONTRATO COM OS VALORES DIGITADOS E FORMATA OS CAMPOS
+
         dadosGerais.innerHTML = `Contratante: ${nome.value}. Profissão: ${profissao.value}. Rg:
     ${rg.value.replace(/(\d{1,2})(\d{3})(\d{3})(\d{1})$/, "$1.$2.$3-$4")}. CPF: ${cpf.value.replace(/(\d{3})?(\d{3})?(\d{3})?(\d{2})/, "$1.$2.$3-$4")
             }. CEP: ${cep.value.replace(/(\d{5})(\d{3})$/, "$1-$2")}. Endereço completo: ${endereco.value}. Telefone para
@@ -42,6 +48,8 @@ botao.addEventListener('click', () => {
             default:
                 break;
         }
+        // RETIRA O CAMPO DE FORMULÁRIO, O BOTÃO E FAZ APARECER O CONTRATO PRONTO! 
+
         contrato.style = "display: block"
         formulario.style = "display: none"
         botao.style = "display: none"
@@ -51,4 +59,3 @@ botao.addEventListener('click', () => {
     }
 })
 
-// cadastro[0].value != '' && cadastro[1].value != '' && cadastro[2].value != '' && cadastro[3].value != '' && cadastro[4].value != '' && cadastro[5].value != '' && cadastro[6].value != '' && cadastro[7].value != '' && cadastro[8].value != '' && cadastro[9].value != '' && cadastro[10].value != '' && cadastro[11].value != '' && cadastro[12].value != '' && cadastro[13].value != '' && cadastro[14].value != '' && cadastro[15].value != '' && cadastro[16] != '' && cadastro[17] != ''
