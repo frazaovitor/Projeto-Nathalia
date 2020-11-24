@@ -59,7 +59,7 @@
         </div>
 
     </div>
-    <form class="formulario">
+    <form nethod="get" class="formulario">
         <div class="form">
 
             <label for="nome">Nome Completo: </label>
@@ -75,7 +75,7 @@
             <input type="text" id="cpf" class="cadastrar" placeholder="Somente números: 00000000000">
 
             <label for="cep">CEP: </label>
-            <input type="text" id="cep" class="cadastrar" placeholder="Somente números: 00000000">
+            <input type="text" id="cep" class="cadastrar" onblur="pesquisaCep(cep.value)" name="cep" placeholder="Somente números: 00000000">
 
             <label for="endereco">Endereço completo: </label>
             <input type="text" id="endereco" class="cadastrar" placeholder="Estrada Adhemar Bebiano, 375">

@@ -25,9 +25,7 @@ botao.addEventListener('click', () => {
         // ATUALIZA O CONTRATO COM OS VALORES DIGITADOS E FORMATA OS CAMPOS
 
         dadosGerais.innerHTML = `Contratante: ${nome.value}. Profissão: ${profissao.value}. Rg:
-    ${rg.value.replace(/(\d{1,2})(\d{3})(\d{3})(\d{1})$/, "$1.$2.$3-$4")}. CPF: ${cpf.value.replace(/(\d{3})?(\d{3})?(\d{3})?(\d{2})/, "$1.$2.$3-$4")
-            }. CEP: ${cep.value.replace(/(\d{5})(\d{3})$/, "$1-$2")}. Endereço completo: ${endereco.value}. Telefone para
-    contato: ${tel.value.replace(/(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3")}. E-mail: ${email.value}.`
+    ${rg.value.replace(/(\d{1,2})(\d{3})(\d{3})(\d{1})$/, "$1.$2.$3-$4")}. CPF: ${cpf.value.replace(/(\d{3})?(\d{3})?(\d{3})?(\d{2})/, "$1.$2.$3-$4")}. CEP: ${cep.value.replace(/(\d{5})(\d{3})$/, "$1-$2")}. Endereço completo: ${endereco.value}. Telefone para contato: ${tel.value.replace(/(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3")}. E-mail: ${email.value}.`
 
         diaCasamento.innerHTML = `Data do casamento: ${dataCasamento.value.split('-').reverse().join('/')}`
         diaEntrega.innerHTML = ` Data de entrega da peça: ${dataEntrega.value.split('-').reverse().join('/')}`
@@ -58,4 +56,27 @@ botao.addEventListener('click', () => {
         alert("Ops, você esqueceu de preencher algum campo!")
     }
 })
+
+function meu_callback(conteudo) {
+    if (!("erro" in conteudo)) {
+        // ATUALIZA O FORMULÁRIO ASSIM QUE COLOCA O CEP.
+        endereco.value = `${conteudo.logradouro}, Bairro: ${conteudo.bairro}, Cidade: ${conteudo.localidade}, UF: ${conteudo.uf}`
+        // endereco.value = enderecoCompleto
+    } else {
+        //CEP não Encontrado.
+        alert("CEP não encontrado.");
+    }
+}
+
+function pesquisaCep(valor) {
+
+    let script = document.createElement('script');
+
+    //Sincroniza com o callback.
+    script.src = 'https://viacep.com.br/ws/' + cep.value + '/json/?callback=meu_callback';
+
+    //Insere script no documento e carrega o conteúdo.
+    document.body.appendChild(script);
+    console.log(script)
+}
 
