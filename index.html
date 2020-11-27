@@ -16,43 +16,34 @@
         <div class="conteudo dados">
             <h1>TERÇOS NATHALIA TRUGILHO</h1>
             <h2>CONTRATO DE PRESTAÇÃO DE SERVIÇO</h2>
-            <p class="dadosGerais dadosContrato">Contratante: *NOME*. Profissão: *PROFISSÃO. Rg:
-                *RG*. CPF: *CPF . CEP: *CEP*. Endereço completo: *ENDEREÇO*. Telefone para
-                contato: *TEL*. E-mail: *EMAIL*.
-            </p>
+            <p id="dadosGerais" class="dadosContrato"></p>
         </div>
-        <div class="conteudo nathalia dadosContrato">
+        <div class="conteudo">
             <p>Contratada: TERÇOS NATHALIA TRUGILHO, representado por Nathália Cristina Baptista Rodrigues, inscrita no
                 CPF 144.359.077-4, residente e domiciliada à Estrada Adhemar Bebiano, 375. Telefone para contato: (21)
                 99927-0304. E-mail: atelienathaliatrugilhoo@gmail.com</p>
-            <p class="destaque dadosContrato">O presente instrumento tem por objeto a prestação do serviço de elaboração de Terços
+            <p class="destaque">O presente instrumento tem por objeto a prestação do serviço de elaboração
+                de Terços
                 Personalizados.</p>
         </div>
-        <div class="conteudo datasEntrega dadosContrato">
+        <div class="conteudo">
             <p>A CONTRATADA prestará o serviço obedecendo aos seguintes detalhes:</p>
-            <p class="dataCasamento linha dadosContrato"> Data do casamento: </p>
-            <p class="dataEntrega linha dadosContrato"> Data de entrega da peça: </p>
-            <p class="localEntrega dadosContrato"></p>
-            <p class="descricao dadosContrato">Descrição técnica da peça: Peça Personalizada: Predaria Pérola Branca 12mm, Entremeio:
-                Nossa Senhora
-                Aparecida (Código: 0011).</p>
-            <p class="descricao valorTotal dadosContrato">Valor: O valor total para a criação/confecção da peça escolhida é de R$
-                160,00 (Cento
-                e Sessenta reais)
-            </p>
-            <p class="descricao formaPagar dadosContrato">Forma de pagamento: Através de depósito ou transferência bancária, na seguinte conta:
+            <p id="dataCasamentoContrato" class="dadosContrato linha dataCasamentoContrato"></p>
+            <p id="dataEntregaContrato" class="dadosContrato linha "></p>
+            <p id="localEntregaContrato" class="dadosContrato localEntregaContrato"></p>
+            <p id="descricaoTecnica" class="descricao dadosContrato"></p>
+            <p id="valorTotalContrato" class="dadosContrato descricao"></p>
+            <p class="descricao">Forma de pagamento: Através de depósito ou transferência
+                bancária, na seguinte conta:
                 BANCO 260 NU
                 Pagamentos S.A - AGÊNCIA 0001 - CONTA CORRENTE 441841-4 - Titular: Nathália Cristina Baptista Rodrigues
                 - CPF 144.359.077-04</p>
             <ul>
                 <li>
-                    <p class="valorReserva dadosContrato">Valor de R$ 40,00 (Quarenta reais) efetuado no dia 17/11/2020 para a
-                        reserva de sua peça.</p>
+                    <p id="valorReservaContrato" class="dadosContrato"></p>
                 </li>
                 <li>
-                    <p class="pagamentoFinal dadosContrato">Dia 18/07/2021 efetivar o pagamento de 50% do valor da criação da peça e
-                        os outros 50% em
-                        dinheiro no dia da entrega (*DATA DA ENTREGA*)</p>
+                    <p id="pagamentoFinalContrato" class="dadosContrato"></p>
                 </li>
             </ul>
 
@@ -69,19 +60,26 @@
             <input type="text" id="profissao" class="cadastrar" placeholder="Cabelereira">
 
             <label for="rg">Rg: </label>
-            <input type="text" id="rg" class="cadastrar" maxlength="9" placeholder="Somente números: 0000000000">
+            <input type="number" id="rg" class="cadastrar" placeholder="Somente números: 0000000000">
 
             <label for="cpf">CPF: </label>
-            <input type="text" id="cpf" class="cadastrar" maxlength="11" placeholder="Somente números: 00000000000">
+            <input type="number" id="cpf" class="cadastrar" placeholder="Somente números: 00000000000">
+
+            <label for="numero">Número da casa: </label>
+            <input type="number" id="numero" class="cadastrar" placeholder="Somente números.">
+
+            <label for="complemento">Complemento: </label>
+            <input type="text" id="complemento" class="cadastrar" placeholder="Casa / apartamento com número.">
 
             <label for="cep">CEP: </label>
-            <input type="text" id="cep" class="cadastrar" maxlength="8" onblur="pesquisaCep(cep.value)" name="cep" placeholder="Somente números: 00000000">
+            <input type="text" id="cep" class="cadastrar" onblur="pesquisaCep(cep.value)"
+                placeholder="Somente números: 00000000">
 
             <label for="endereco">Endereço completo: </label>
-            <input type="text" id="endereco" class="cadastrar" placeholder="Estrada Adhemar Bebiano, 375">
+            <input type="text" id="endereco" class="cadastrar" placeholder="Será preenchido quando o CEP for colocado!">
 
             <label for="tel">Telefone para Contato: </label>
-            <input type="tel" id="tel" class="cadastrar" maxlength="11" placeholder="Somente números com o ddd: 00000000000">
+            <input type="number" id="tel" class="cadastrar" placeholder="Somente números com o ddd: 00000000000">
 
             <label for="email">E-mail: </label>
             <input type="email" id="email" class="cadastrar" placeholder="atelienathaliatrugilhoo@gmail.com">
@@ -94,18 +92,36 @@
 
             <label for="localEntrega">Local da Entrega: </label>
             <select name="localEntrega" class="cadastrar" id="localEntrega">
+                <option>Selecionar</option>
                 <option value="novaAmerica">Nova América</option>
                 <option value="correio">Correios</option>
             </select>
 
-            <label for="descricao">Descrição: </label>
-            <input type="text" id="descricao" class="cadastrar" placeholder="Peça Personalizada: Predaria Pérola Branca 12mm">
+            <label for="descricaoPeca">Descrição da Peça: </label>
+            <select name="descricaoPeca" class="cadastrar" id="descricaoPeca" onblur="selecaoPeca()">
+                <option>Selecionar</option>
+                <option value="pecaFechada">Peça Fechada</option>
+                <option value="pecaPersonalizada">Peça Personalizada</option>
+            </select>
 
-            <label for="entremeio">entremeio: </label>
-            <input type="text" id="entremeio" class="cadastrar" placeholder="Nossa Senhora Aparecida">
+            <label for="pedraria" id="pedrariaL" class="pecaPersonalizada">Pedraria: </label>
+            <input type="text" id="pedraria" class="pecaPersonalizada cadastrar" placeholder="Pérola Branca 12mm">
 
-            <label for="entremeioCod">Código do Entremeio: </label>
-            <input type="text" id="entremeioCod" class="cadastrar" placeholder="0000">
+            <label for="pedrariaCod" id="pedrariaCodL" class="pecaPersonalizada">Código da Pedraria: </label>
+            <input type="number" id="pedrariaCod" class="pecaPersonalizada cadastrar" placeholder="0000">
+
+            <label for="modeloCruz" id="modeloCruzL" class="pecaPersonalizada">Cruz: </label>
+            <input type="text" id="modeloCruz" class="pecaPersonalizada cadastrar"
+                placeholder="Não sei qual modelo por de exemplo">
+
+            <label for="modeloCruzCod" id="modeloCruzCodL" class="pecaPersonalizada">Código da Cruz: </label>
+            <input type="number" id="modeloCruzCod" class="pecaPersonalizada cadastrar" placeholder="0000">
+
+            <label for="entremeio" id="entremeioL" class="pecaPersonalizada">entremeio: </label>
+            <input type="text" id="entremeio" class="pecaPersonalizada cadastrar" placeholder="Nossa Senhora Aparecida">
+
+            <label for="entremeioCod" id="entremeioCodL" class="pecaPersonalizada">Código do Entremeio: </label>
+            <input type="number" id="entremeioCod" class="pecaPersonalizada cadastrar" placeholder="0000">
 
             <label for="valorTotal">Valor Total: </label>
             <input type="text" id="valorTotal" class="cadastrar" placeholder="160,00 (Cento e Sessenta Reais)">

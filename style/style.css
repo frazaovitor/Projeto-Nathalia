@@ -49,6 +49,12 @@ p {
 .contrato {
   display: none;
 }
+.localEntregaContrato{
+  margin-top: 28px;
+}
+.dataCasamentoContrato{
+  margin-bottom: -4px;
+}
 .formulario {
   margin: auto;
   margin-top: 5rem;
@@ -70,7 +76,7 @@ p {
   justify-content: center;
   margin: 0 auto;
 }
-input {
+input, option {
   background-color: thistle;
   border: solid black;
   border-radius: 5px;
