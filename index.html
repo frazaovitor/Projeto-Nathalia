@@ -19,12 +19,9 @@
             <p id="dadosGerais" class="dadosContrato"></p>
         </div>
         <div class="conteudo">
-            <p>Contratada: TERÇOS NATHALIA TRUGILHO, representado por Nathália Cristina Baptista Rodrigues, inscrita no
-                CPF 144.359.077-4, residente e domiciliada à Estrada Adhemar Bebiano, 375. Telefone para contato: (21)
-                99927-0304. E-mail: atelienathaliatrugilhoo@gmail.com</p>
-            <p class="destaque">O presente instrumento tem por objeto a prestação do serviço de elaboração
-                de Terços
-                Personalizados.</p>
+            <p>Contratada: TERÇOS NATHALIA TRUGILHO, representado por Nathália Cristina Baptista Rodrigues, inscrita no CPF 144.359.077-4, residente e domiciliada à Estrada Adhemar Bebiano, 375. Telefone para contato: (21) 99927-0304. E-mail: atelienathaliatrugilhoo@gmail.com</p>
+            <p class="destaque">O presente instrumento tem por objeto a prestação do serviço de elaboração de Terços Personalizados.
+            </p>
         </div>
         <div class="conteudo">
             <p>A CONTRATADA prestará o serviço obedecendo aos seguintes detalhes:</p>
@@ -33,11 +30,7 @@
             <p id="localEntregaContrato" class="dadosContrato localEntregaContrato"></p>
             <p id="descricaoTecnica" class="descricao dadosContrato"></p>
             <p id="valorTotalContrato" class="dadosContrato descricao"></p>
-            <p class="descricao">Forma de pagamento: Através de depósito ou transferência
-                bancária, na seguinte conta:
-                BANCO 260 NU
-                Pagamentos S.A - AGÊNCIA 0001 - CONTA CORRENTE 441841-4 - Titular: Nathália Cristina Baptista Rodrigues
-                - CPF 144.359.077-04</p>
+            <p class="descricao">Forma de pagamento: Através de depósito ou transferência bancária, na seguinte conta: BANCO 260 NU Pagamentos S.A - AGÊNCIA 0001 - CONTA CORRENTE 441841-4 - Titular: Nathália Cristina Baptista Rodrigues - CPF 144.359.077-04</p>
             <ul>
                 <li>
                     <p id="valorReservaContrato" class="dadosContrato"></p>
@@ -53,86 +46,84 @@
     <form nethod="get" class="formulario">
         <div class="form">
 
-            <label for="nome">Nome Completo: </label>
-            <input type="text" id="nome" class="cadastrar" placeholder="Nathália Cristina Baptista Rodrigues">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" class="cadastrar" placeholder="Nome Completo">
 
-            <label for="profissao">Profissão: </label>
+            <label for="profissao">Profissão</label>
             <input type="text" id="profissao" class="cadastrar" placeholder="Cabelereira">
 
-            <label for="rg">Rg: </label>
+            <label for="rg">Rg</label>
             <input type="number" id="rg" class="cadastrar" placeholder="Somente números: 0000000000">
 
-            <label for="cpf">CPF: </label>
+            <label for="cpf">CPF</label>
             <input type="number" id="cpf" class="cadastrar" placeholder="Somente números: 00000000000">
 
-            <label for="numero">Número da casa: </label>
+            <label for="numero">Número da casa</label>
             <input type="number" id="numero" class="cadastrar" placeholder="Somente números.">
 
-            <label for="complemento">Complemento: </label>
+            <label for="complemento">Complemento</label>
             <input type="text" id="complemento" class="cadastrar" placeholder="Casa / apartamento com número.">
 
-            <label for="cep">CEP: </label>
-            <input type="text" id="cep" class="cadastrar" onblur="pesquisaCep(cep.value)"
-                placeholder="Somente números: 00000000">
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" class="cadastrar" onblur="pesquisaCep(cep.value)" placeholder="Somente números: 00000000">
 
-            <label for="endereco">Endereço completo: </label>
+            <label for="endereco">Endereço completo</label>
             <input type="text" id="endereco" class="cadastrar" placeholder="Será preenchido quando o CEP for colocado!">
 
-            <label for="tel">Telefone para Contato: </label>
+            <label for="tel">Telefone para Contato</label>
             <input type="number" id="tel" class="cadastrar" placeholder="Somente números com o ddd: 00000000000">
 
-            <label for="email">E-mail: </label>
+            <label for="email">E-mail</label>
             <input type="email" id="email" class="cadastrar" placeholder="atelienathaliatrugilhoo@gmail.com">
 
-            <label for="dataCasamento">Data do Casamento: </label>
+            <label for="dataCasamento">Data do Casamento</label>
             <input type="date" id="dataCasamento" class="cadastrar" placeholder="00/00/0000">
 
-            <label for="dataEntrega">Data da Entrega: </label>
+            <label for="dataEntrega">Data da Entrega</label>
             <input type="date" id="dataEntrega" class="cadastrar" placeholder="00/00/0000">
 
-            <label for="localEntrega">Local da Entrega: </label>
+            <label for="localEntrega">Local da Entrega</label>
             <select name="localEntrega" class="cadastrar" id="localEntrega">
                 <option>Selecionar</option>
                 <option value="novaAmerica">Nova América</option>
                 <option value="correio">Correios</option>
             </select>
 
-            <label for="descricaoPeca">Descrição da Peça: </label>
+            <label for="descricaoPeca">Descrição da Peça</label>
             <select name="descricaoPeca" class="cadastrar" id="descricaoPeca" onblur="selecaoPeca()">
                 <option>Selecionar</option>
                 <option value="pecaFechada">Peça Fechada</option>
                 <option value="pecaPersonalizada">Peça Personalizada</option>
             </select>
 
-            <label for="pedraria" id="pedrariaL" class="pecaPersonalizada">Pedraria: </label>
+            <label for="pecaFechadaCod" id="pecaFechadaCodL" class="pecaPersonalizada">Peça Fechada Código</label>
+            <input type="number" id="pecaFechadaCod" class="pecaPersonalizada cadastrar" placeholder="0000">
+
+            <label for="pedraria" id="pedrariaL" class="pecaPersonalizada">Pedraria</label>
             <input type="text" id="pedraria" class="pecaPersonalizada cadastrar" placeholder="Pérola Branca 12mm">
 
-            <label for="pedrariaCod" id="pedrariaCodL" class="pecaPersonalizada">Código da Pedraria: </label>
+            <label for="pedrariaCod" id="pedrariaCodL" class="pecaPersonalizada">Código da Pedraria</label>
             <input type="number" id="pedrariaCod" class="pecaPersonalizada cadastrar" placeholder="0000">
 
-            <label for="modeloCruz" id="modeloCruzL" class="pecaPersonalizada">Cruz: </label>
-            <input type="text" id="modeloCruz" class="pecaPersonalizada cadastrar"
-                placeholder="Não sei qual modelo por de exemplo">
-
-            <label for="modeloCruzCod" id="modeloCruzCodL" class="pecaPersonalizada">Código da Cruz: </label>
+            <label for="modeloCruzCod" id="modeloCruzCodL" class="pecaPersonalizada">Código da Cruz</label>
             <input type="number" id="modeloCruzCod" class="pecaPersonalizada cadastrar" placeholder="0000">
 
-            <label for="entremeio" id="entremeioL" class="pecaPersonalizada">entremeio: </label>
+            <label for="entremeio" id="entremeioL" class="pecaPersonalizada">Entremeio</label>
             <input type="text" id="entremeio" class="pecaPersonalizada cadastrar" placeholder="Nossa Senhora Aparecida">
 
-            <label for="entremeioCod" id="entremeioCodL" class="pecaPersonalizada">Código do Entremeio: </label>
+            <label for="entremeioCod" id="entremeioCodL" class="pecaPersonalizada">Código do Entremeio</label>
             <input type="number" id="entremeioCod" class="pecaPersonalizada cadastrar" placeholder="0000">
 
-            <label for="valorTotal">Valor Total: </label>
+            <label for="valorTotal">Valor Total</label>
             <input type="text" id="valorTotal" class="cadastrar" placeholder="160,00 (Cento e Sessenta Reais)">
 
-            <label for="valorReserva">Valor da Reserva: </label>
+            <label for="valorReserva">Valor da Reserva</label>
             <input type="text" id="valorReserva" class="cadastrar" placeholder="40,00 (Quarenta Reais)">
 
-            <label for="diaReserva">Dia da Reserva: </label>
+            <label for="diaReserva">Dia da Reserva</label>
             <input type="date" id="diaReserva" class="cadastrar" placeholder="00/00/00">
 
-            <label for="pagamentoFinal">Data Final do Pagamento: </label>
+            <label for="pagamentoFinal">Data Final do Pagamento</label>
             <input type="date" id="pagamentoFinal" class="cadastrar" placeholder="00/00/00">
         </div>
     </form>

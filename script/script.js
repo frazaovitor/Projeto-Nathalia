@@ -46,7 +46,7 @@ botao.addEventListener('click', () => {
                 descricaoTecnica.innerHTML = `Descrição Técnica da Peça: Peça fechada (Código: ${pecaFechadaCod.value})`
                 break;
             case "pecaPersonalizada":
-                descricaoTecnica.innerHTML = `Descrição Técnica da Peça: Peça Personalizada Pedraria: ${pedraria.value} (Código: ${pedrariaCod.value}), Cruz: ${modeloCruz.value} (Código: ${modeloCruzCod.value}), Entremeio: ${entremeio.value} (Código: ${entremeioCod.value}).`
+                descricaoTecnica.innerHTML = `Descrição Técnica da Peça: Peça Personalizada: Pedraria: ${pedraria.value} (Código: ${pedrariaCod.value}), Cruz: (Código: ${modeloCruzCod.value}), Entremeio: ${entremeio.value} (Código: ${entremeioCod.value}).`
 
                 break;
 
@@ -122,25 +122,29 @@ function verificaVazio(cadastro) {
 function selecaoPeca() {
     if (descricaoPeca.value == "pecaFechada") {
         entremeio.style = 'display: none'
-        entremeioCod.style = 'display: none'
         entremeioL.style = 'display: none'
+        entremeioCod.style = 'display: none'
         entremeioCodL.style = 'display: none'
-        modeloCruz.style = 'display: none'
-        modeloCruzL.style = 'display: none'
         modeloCruzCod.style = 'display: none'
         modeloCruzCodL.style = 'display: none'
         pedraria.style = 'display: none'
         pedrariaL.style = 'display: none'
+        pedrariaCod.style = 'display: none'
+        pedrariaCodL.style = 'display: none'
+        pecaFechadaCod.style = 'display:block'
+        pecaFechadaCodL.style = 'display:block'
     } else {
         entremeio.style = 'display: block'
-        entremeioCod.style = 'display: block'
         entremeioL.style = 'display: block'
+        entremeioCod.style = 'display: block'
         entremeioCodL.style = 'display: block'
-        modeloCruz.style = 'display: block'
-        modeloCruzL.style = 'display: block'
         modeloCruzCod.style = 'display: block'
         modeloCruzCodL.style = 'display: block'
         pedraria.style = 'display: block'
         pedrariaL.style = 'display: block'
+        pedrariaCod.style = 'display: block'
+        pedrariaCodL.style = 'display: block'
+        pecaFechadaCod.style = 'display: none'
+        pecaFechadaCodL.style = 'display: none'
     }
 }
