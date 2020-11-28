@@ -21,7 +21,7 @@ botao.addEventListener('click', () => {
 
     // VERIFICA SE EXISTE ALGUM CAMPO NÃO PREENCHIDO
 
-    if (true) {
+    if (verificaVazio(cadastro)) {
 
         // ATUALIZA O CONTRATO COM OS VALORES DIGITADOS E FORMATA OS CAMPOS
 
