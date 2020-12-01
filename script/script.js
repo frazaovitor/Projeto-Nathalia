@@ -46,7 +46,7 @@ botao.addEventListener('click', () => {
                 descricaoTecnica.innerHTML = `Descrição Técnica da Peça: Peça fechada (Código: ${pecaFechadaCod.value})`
                 break;
             case "pecaPersonalizada":
-                descricaoTecnica.innerHTML = `Descrição Técnica da Peça: Peça Personalizada: Pedraria: ${pedraria.value} (Código: ${pedrariaCod.value}), Cruz: (Código: ${modeloCruzCod.value}), Entremeio: ${entremeio.value} (Código: ${entremeioCod.value}).`
+                descricaoTecnica.innerHTML = `Descrição Técnica da Peça: Peça Personalizada: Pedraria: ${pedraria.value} (Código: ${pedrariaCod.value}),  Entremeio: ${entremeio.value} (Código: ${entremeioCod.value}), Cruz: (Código: ${modeloCruzCod.value}).`
 
                 break;
 
