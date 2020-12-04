@@ -68,7 +68,7 @@ p {
 .contrato2 {
   display: none;
 }
-.conteudo2 > p {
+.conteudo2 > p, .conteudo2 > ul>li>p {
   font-size: 18px;
 }
 
@@ -121,7 +121,6 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-
   align-items: center;
   margin: 0 auto;
   width: 100%;
