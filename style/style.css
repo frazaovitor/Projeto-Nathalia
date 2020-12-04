@@ -1,128 +1,161 @@
 body,
 html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-    width: 21cm;
-    height: 27.71cm;
-    margin: 0 auto;
-    background-color: #f7f7f7;
-    border: solid 1cm #d6a59e;
-    overflow: hidden;
+.container,
+.container2 {
+  width: 21cm;
+  height: 27.75cm;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  border: solid 1cm #d6a59e;
+  overflow: hidden;
 }
 
 .img {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 img {
-    height: 3cm;
+  height: 3cm;
 }
 
 .conteudo {
-    text-align: center;
-    margin: 0 1cm 1cm 1cm;
+  text-align: center;
+  margin: 0 1cm 1cm 1cm;
 }
 
 p {
-    text-align: left;
-    font-size: 20px;
+  text-align: left;
+  font-size: 20px;
+}
+.margenLinha {
+  margin: 1px 0 1px 0;
+}
+.margenLinhaBaixo {
+  margin-bottom: 1px;
 }
 
 .destaque {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: underline;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .linha {
-    line-height: 5px;
+  line-height: 5px;
 }
 
 .localEntrega {
-    margin-top: -10px;
+  margin-top: -10px;
 }
 
 .descricao {
-    margin-top: -20px;
+  margin-top: -20px;
 }
 
 .formaPagar {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-.contrato {
-    display: none;
+.contrato,
+.contrato2 {
+  display: none;
+}
+.conteudo2 > p {
+  font-size: 18px;
 }
 
 .localEntregaContrato {
-    margin-top: 28px;
+  margin-top: 28px;
 }
 
 .dataCasamentoContrato {
-    margin-bottom: -4px;
-}
-
-.formulario {
-    margin: auto;
-    margin-top: 5rem;
-    line-height: 40px;
-    width: 1024px;
-    border: solid 1cm #d6a59e;
-    border-bottom: none;
-    background-color: #f7f7f7;
-    overflow: hidden;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.form {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    padding: 1rem;
-    width: 600px;
-    justify-content: center;
-    margin: 0 auto;
+  margin-bottom: -4px;
 }
 
 input,
 option,
 select {
-    background-color: thistle;
-    border: solid rgb(121, 91, 91);
-    border-radius: 30px;
-    padding: 1rem;
-    font-size: 18px;
-    color: black;
-    font-weight: bold;
+  background-color: thistle;
+  border: solid rgb(121, 91, 91);
+  border-radius: 30px;
+  padding: 1rem;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  width: 500px;
+  text-align: center;
+  justify-content: center;
 }
 
 body {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
 
 .enviar {
-    border: none;
-    padding: 0 4rem;
-    height: 5rem;
-    background-color: thistle;
-    margin-bottom: 10rem;
-    margin-top: 3rem;
-    border-radius: 5px;
-    color: #000;
-    font-size: 20px;
-    font-weight: bold;
-    transition: .5s;
+  border: none;
+  padding: 0 4rem;
+  height: 5rem;
+  background-color: thistle;
+  margin-bottom: 10rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s;
 }
 
 .enviar:hover {
-    background-color: rgb(173, 106, 173);
+  background-color: rgb(173, 106, 173);
+}
+.containerForm {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 3rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.assinatura {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ass{
+  margin: -5px 0px -13px 0;
+}
+.assImg {
+  width: 354px;
+  height: 55px;
+  margin-bottom: -22px;
+}
+
+@media screen and(max-width: 320px) {
+  .formulario {
+    background-color: red;
+  }
 }

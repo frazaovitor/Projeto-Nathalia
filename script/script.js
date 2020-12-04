@@ -1,3 +1,10 @@
+// ATUALIZA A DATA DO CONTRATO
+
+data = document.querySelector('.data')
+date = new Date()
+monName = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "novembro", "dezembro")
+data.innerHTML = `Rio de Janeiro, ${date.getDate()} de ${monName[date.getMonth()]} de ${date.getFullYear()}`
+
 // CAPTURA OS CAMPOS DO FORMULÁRIO
 
 cadastro = document.querySelectorAll('.cadastrar')
@@ -7,10 +14,10 @@ pecaPersonalizada = document.querySelectorAll('.pecaPersonalizada')
 
 dadosContrato = document.querySelectorAll('.dadosContrato')
 
-
 // CAPTURA O CONTRATO E DO FORMULÁRIO
 
 contrato = document.querySelector('.contrato')
+contrato2 = document.querySelector('.contrato2')
 formulario = document.querySelector('.formulario')
 
 
@@ -21,7 +28,7 @@ botao.addEventListener('click', () => {
 
     // VERIFICA SE EXISTE ALGUM CAMPO NÃO PREENCHIDO
 
-    if (verificaVazio(cadastro)) {
+    if (true) {
 
         // ATUALIZA O CONTRATO COM OS VALORES DIGITADOS E FORMATA OS CAMPOS
 
@@ -69,10 +76,13 @@ botao.addEventListener('click', () => {
                 pagamentoFinalContrato.innerHTML = `Dia ${formatData(pagamentoFinal.value)} efetivar o pagamento de 100% do valor da criação da peça mais o acréscimo do frete.`
 
                 break;
-        }
-        // RETIRA O CAMPO DE FORMULÁRIO, O BOTÃO E FAZ APARECER O CONTRATO PRONTO! 
 
+
+
+            // RETIRA O CAMPO DE FORMULÁRIO, O BOTÃO E FAZ APARECER O CONTRATO PRONTO! 
+        }
         contrato.style = "display: block"
+        contrato2.style = "display: block"
         formulario.style = "display: none"
         botao.style = "display: none"
 
@@ -118,6 +128,10 @@ function verificaVazio(cadastro) {
     }
 }
 
+
+
+
+
 // APAGA OS CAMPOS NÃO SELECIONADOS (PEÇA FECHADA OU PEÇA PERSONALIZADA)
 function selecaoPeca() {
     if (descricaoPeca.value == "pecaFechada") {
@@ -148,3 +162,9 @@ function selecaoPeca() {
         pecaFechadaCodL.style = 'display: none'
     }
 }
+
+
+// pdf = document.querySelector('#pdf')
+// pdf.addEventListener('click',()=>{
+//    return window.print()
+// })
