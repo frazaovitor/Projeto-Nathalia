@@ -168,3 +168,5 @@ function selecaoPeca() {
 // pdf.addEventListener('click',()=>{
 //    return window.print()
 // })
+
+()=>{return {}}
